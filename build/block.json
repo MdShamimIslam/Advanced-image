@@ -1,0 +1,141 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "b-blocks/advanced-image",
+  "version": "1.0.0",
+  "title": "Advanced Image",
+  "category": "widgets",
+  "description": "A block that allows for advanced image handling with custom features.",
+  "keywords": [
+    "b block",
+    "advanced",
+    "image",
+    "advanced image"
+  ],
+  "textdomain": "b-blocks",
+  "attributes": {
+    "image": {
+      "type": "object",
+      "default": {
+        "sourceType": "",
+        "source": {
+          "id": "",
+          "url": "",
+          "alt": "",
+          "title": ""
+        },
+        "link": {
+          "url": ""
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "size": "default",
+        "width": {
+          "desktop": "300px",
+          "tablet": "200px",
+          "mobile": "150px"
+        },
+        "height": {
+          "desktop": "230px",
+          "tablet": "200px",
+          "mobile": "150px"
+        },
+        "isAutoHeight": true,
+        "isAutoFit": false,
+        "fitOptionType": "cover",
+        "enableNewTab": false
+      }
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "hoverEffect": "none",
+        "optionType": "rounded",
+        "alignment": {
+          "desktop": "start",
+          "tablet": "start",
+          "mobile": "start"
+        },
+        "selectBorder": "normal",
+        "border": {
+          "normal": {},
+          "hover": {}
+        },
+        "selectShadow": "normal",
+        "shadow": {
+          "normal": [],
+          "hover": []
+        }
+      }
+    },
+    "caption": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "text": ""
+      }
+    },
+    "captionStyle": {
+      "type": "object",
+      "default": {
+        "typo": {},
+        "textAlign": {
+          "desktop": "center",
+          "tablet": "center",
+          "mobile": "center"
+        },
+        "horizontalAlign": {
+          "desktop": "start",
+          "tablet": "start",
+          "mobile": "start"
+        },
+        "verticalAlign": {
+          "desktop": "bottom",
+          "tablet": "top",
+          "mobile": "middle"
+        },
+        "colors": {
+          "color": "black",
+          "bg": "#eee"
+        },
+        "width": {
+          "desktop": "",
+          "tablet": "",
+          "mobile": ""
+        },
+        "margin": {
+          "desktop": {},
+          "tablet": {},
+          "mobile": {}
+        },
+        "padding": {
+          "desktop": {},
+          "tablet": {},
+          "mobile": {}
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "style": "file:./style-view.css",
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "react",
+    "react-dom"
+  ]
+}
