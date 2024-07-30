@@ -13,7 +13,7 @@ $primaryColor: #4527a4;
 		box-sizing: border-box;
 	}
 
-.sourceType {
+	.sourceType {
 		.images {
 			display: flex;
 			justify-content: center;
@@ -21,24 +21,24 @@ $primaryColor: #4527a4;
 			gap: 50px;
 			text-align: center;
 		}
-	
+
 		.imgText {
 			margin-top: -15px;
 			color: rgb(124, 121, 123);
 			font-size: 14px;
 		}
-	
+
 		.imgSource {
 			text-align: center;
 			font-weight: semibold;
 			margin-top: -10px;
 			color: #4527a4;
 		}
-	
+
 	}
 
 
-.bBlocksAdvancedImage {
+	.bBlocksAdvancedImage {
 		display: flex;
 		flex-direction: column;
 
@@ -50,11 +50,14 @@ $primaryColor: #4527a4;
 			transition: transform 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
 		}
 
-		.customImage,.featuredImage {
-			position : relative;
-		}
+		.customImage,
 		.featuredImage {
-			h3{
+			position: relative;
+			max-width: 100%;
+		}
+
+		.featuredImage {
+			h3 {
 				color: red;
 			}
 		}
@@ -102,146 +105,3 @@ $primaryColor: #4527a4;
 	padding: 10px 15px;
 	border-radius: 15px;
 }
-
-// top level style
-.inheritStyle1 {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-// for padding
-.padding {
-	@extend .inheritStyle1;
-}
-
-// for margin
-.margin {
-	@extend .inheritStyle1;
-}
-
-// for imgAlign
-.imgAlign {
-	@extend .inheritStyle1;
-}
-
-// for customWidth
-.customWidth {
-	@extend .inheritStyle1;
-}
-
-// for customHeight
-.customHeight {
-	@extend .inheritStyle1;
-}
-
-.customTextAlign {
-	@extend .inheritStyle1;
-}
-
-.typo {
-	@extend .inheritStyle1;
-}
-
-.colorsPar {
-	@extend .inheritStyle1;
-}
-
-.capBor {
-	@extend .inheritStyle1;
-}
-
-// label style
-.inheritStyle2 {
-	margin-bottom: -5px;
-	font-weight: 500;
-	color: #4524a4;
-}
-
-.padChild {
-	@extend .inheritStyle2;
-}
-
-.typoChild {
-	@extend .inheritStyle2;
-}
-
-.colorsChild {
-	@extend .inheritStyle2;
-}
-
-.disBChild {
-	@extend .inheritStyle2;
-}
-
-.marChild {
-	@extend .inheritStyle2;
-}
-
-.shadChild {
-	@extend .inheritStyle2;
-	margin-bottom: 10px;
-}
-
-.borChild {
-	@extend .inheritStyle2;
-	margin-bottom: 10px;
-}
-
-.alignChild {
-	@extend .inheritStyle2;
-}
-
-.sourceChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.stlChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.captionChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.imgSizeChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.widthChild {
-	@extend .inheritStyle2;
-}
-
-.heightChild {
-	@extend .inheritStyle2;
-}
-
-.fitImgChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.enableLinkChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.hoverEffectChild {
-	@extend .inheritStyle2;
-	margin-bottom: 5px;
-}
-
-.textAlignChild {
-	@extend .inheritStyle2;
-}
-
-// margin top and right gap
-.my {
-	margin-top: 7px;
-
-}
-

@@ -1,15 +1,16 @@
 import { getBorderCSS, getBoxCSS, getColorsCSS, getMultiShadowCSS, getTypoCSS } from '../../../../Components/utils/getCSS';
 
 const Style = ({ attributes, id, device = 'desktop' }) => {
-    const { layout, style, captionStyle,image } = attributes;
+    const { layout, style, captionStyle, image } = attributes;
     const { width, height, isAutoHeight, isAutoFit, fitOptionType } = layout;
     const { hoverEffect, optionType, alignment, border, shadow } = style;
     const { typo, textAlign, horizontalAlign, colors, verticalAlign, width: capWidth, margin, padding } = captionStyle;
- 
+    // classes
     const imageSl = `#${id} .bBlocksAdvancedImage`;
     const customSl = `${imageSl} .customImage`;
     const featuredSl = `${imageSl} .featuredImage`;
     const captionSl = `${customSl} .caption`;
+
 
     return <style dangerouslySetInnerHTML={{
         __html: `
@@ -18,9 +19,8 @@ const Style = ({ attributes, id, device = 'desktop' }) => {
         ${getTypoCSS(captionSl, typo)?.styles}
 
         ${customSl}, ${featuredSl}{
-            width : ${ image.source?.url ? width[device] : '100%'};
-			height: ${ isAutoHeight ? 'auto' : height[device]};
-            cursor: ${image.link.url ? 'pointer' : 'default'};
+            width : ${image.source?.url ? width[device] : '100%'};
+            height: ${isAutoHeight ? 'auto' : height[device]};
         }
       
         ${imageSl}{
@@ -36,7 +36,7 @@ const Style = ({ attributes, id, device = 'desktop' }) => {
 
         ${imageSl} img{
             filter:${hoverEffect === 'blur' ? 'blur(3px)' : 'blur(0px)'};
-            border-radius: ${optionType === 'rounded' ? border.normal.radius : optionType === 'square' ? '0px' : (optionType === 'Circle' ? '100%'  : border.normal.radius)};
+            border-radius: ${optionType === 'rounded' ? border.normal.radius : optionType === 'square' ? '0px' : (optionType === 'Circle' ? '100%' : border.normal.radius)};
             clip-path :${optionType === 'Triangle' ? 'polygon(50% 0%, 0% 100%, 100% 100%)' :
                 optionType === 'Rhombus' ? 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' :
                     optionType === 'Octagon' ? 'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)' :
@@ -66,7 +66,7 @@ const Style = ({ attributes, id, device = 'desktop' }) => {
 			}
 
 			${customSl},${featuredSl}{
-                width : ${ image.source?.url ? width.tablet: '100%'};
+                width : ${image.source?.url ? width.tablet : '100%'};
                 height: ${isAutoHeight ? 'auto' : height.tablet};
             }
 
@@ -84,7 +84,7 @@ const Style = ({ attributes, id, device = 'desktop' }) => {
 			}
 
 			${customSl},${featuredSl}{
-                width : ${ image.source?.url ? width.mobile: '100%'};
+                width : ${image.source?.url ? width.mobile : '100%'};
                 height: ${isAutoHeight ? 'auto' : height.mobile};
             }
 
@@ -102,12 +102,12 @@ export default Style;
 
 const captionAlignment = (verticalAlign, horizontalAlign, device) => {
     return `
-    ${horizontalAlign[device] === "start" ? 'left: 0;' : ''}
-    ${horizontalAlign[device] === "center" ? 'left: 50%; transform: translateX(-50%);' : ''}
-    ${horizontalAlign[device] === "end" ? 'right: 0;' : ''}
-    ${verticalAlign[device] === "top" ? 'top: 0;' : ''}
-    ${verticalAlign[device] === "middle" ? 'top: 50%; transform: translateY(-50%);' : ''}
-    ${verticalAlign[device] === "bottom" ? 'bottom: 0;' : ''}
-    ${horizontalAlign[device] === "center" ? verticalAlign[device] === "middle" ? "left: 50%; top: 50%; transform: translate(-50%, -50%);" : "" : ""};
+    ${horizontalAlign[device] === "start" ? 'left: 0; right: auto;' : ''}
+    ${horizontalAlign[device] === "center" ? 'left: 50%; right: auto; transform: translateX(-50%);' : ''}
+    ${horizontalAlign[device] === "end" ? 'right: 0; left: auto;' : ''}
+    ${verticalAlign[device] === "top" ? 'top: 0; bottom: auto;' : ''}
+    ${verticalAlign[device] === "middle" ? 'top: 50%; bottom: auto; transform: translateY(-50%);' : ''}
+    ${verticalAlign[device] === "bottom" ? 'bottom: 0; top: auto;' : ''}
+    ${horizontalAlign[device] === "center" ? verticalAlign[device] === "middle" ? "top: 50%; right: auto; bottom: auto; left: 50%; transform: translate(-50%, -50%);" : "" : ""}
   `
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Advanced Image Block
+ * Plugin Name: Advanced Image
  * Description: A customizable image block with enhanced editing and display features..
  * Version: 1.0.0
  * Author: bPlugins

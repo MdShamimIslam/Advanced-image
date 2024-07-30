@@ -34,16 +34,16 @@
 			"default": {
 				"size": "default",
 				"width": {
-					"desktop": "300px",
-					"tablet": "200px",
-					"mobile": "150px"
+					"desktop": "100%",
+					"tablet": "100%",
+					"mobile": "100%"
 				},
+				"isAutoHeight": true,
 				"height": {
 					"desktop": "230px",
 					"tablet": "200px",
 					"mobile": "150px"
 				},
-				"isAutoHeight": true,
 				"isAutoFit": false,
 				"fitOptionType": "cover",
 				"enableNewTab": false

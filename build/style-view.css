@@ -41,8 +41,10 @@
   max-height: 100%;
   transition: transform 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
 }
-.wp-block-b-blocks-advanced-image .bBlocksAdvancedImage .customImage, .wp-block-b-blocks-advanced-image .bBlocksAdvancedImage .featuredImage {
+.wp-block-b-blocks-advanced-image .bBlocksAdvancedImage .customImage,
+.wp-block-b-blocks-advanced-image .bBlocksAdvancedImage .featuredImage {
   position: relative;
+  max-width: 100%;
 }
 .wp-block-b-blocks-advanced-image .bBlocksAdvancedImage .featuredImage h3 {
   color: red;
@@ -80,58 +82,6 @@
   background: #EEEEEE;
   padding: 10px 15px;
   border-radius: 15px;
-}
-
-.inheritStyle1, .capBor, .colorsPar, .typo, .customTextAlign, .customHeight, .customWidth, .imgAlign, .margin, .padding {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.inheritStyle2, .textAlignChild, .hoverEffectChild, .enableLinkChild, .fitImgChild, .heightChild, .widthChild, .imgSizeChild, .captionChild, .stlChild, .sourceChild, .alignChild, .borChild, .shadChild, .marChild, .disBChild, .colorsChild, .typoChild, .padChild {
-  margin-bottom: -5px;
-  font-weight: 500;
-  color: #4524a4;
-}
-
-.shadChild {
-  margin-bottom: 10px;
-}
-
-.borChild {
-  margin-bottom: 10px;
-}
-
-.sourceChild {
-  margin-bottom: 5px;
-}
-
-.stlChild {
-  margin-bottom: 5px;
-}
-
-.captionChild {
-  margin-bottom: 5px;
-}
-
-.imgSizeChild {
-  margin-bottom: 5px;
-}
-
-.fitImgChild {
-  margin-bottom: 5px;
-}
-
-.enableLinkChild {
-  margin-bottom: 5px;
-}
-
-.hoverEffectChild {
-  margin-bottom: 5px;
-}
-
-.my {
-  margin-top: 7px;
 }
 
 /*# sourceMappingURL=style-view.css.map*/

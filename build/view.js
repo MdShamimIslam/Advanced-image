@@ -257,6 +257,7 @@ const Style = ({
     margin,
     padding
   } = captionStyle;
+  // classes
   const imageSl = `#${id} .bBlocksAdvancedImage`;
   const customSl = `${imageSl} .customImage`;
   const featuredSl = `${imageSl} .featuredImage`;
@@ -270,8 +271,7 @@ const Style = ({
 
         ${customSl}, ${featuredSl}{
             width : ${image.source?.url ? width[device] : '100%'};
-			height: ${isAutoHeight ? 'auto' : height[device]};
-            cursor: ${image.link.url ? 'pointer' : 'default'};
+            height: ${isAutoHeight ? 'auto' : height[device]};
         }
       
         ${imageSl}{
@@ -348,13 +348,13 @@ const Style = ({
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Style);
 const captionAlignment = (verticalAlign, horizontalAlign, device) => {
   return `
-    ${horizontalAlign[device] === "start" ? 'left: 0;' : ''}
-    ${horizontalAlign[device] === "center" ? 'left: 50%; transform: translateX(-50%);' : ''}
-    ${horizontalAlign[device] === "end" ? 'right: 0;' : ''}
-    ${verticalAlign[device] === "top" ? 'top: 0;' : ''}
-    ${verticalAlign[device] === "middle" ? 'top: 50%; transform: translateY(-50%);' : ''}
-    ${verticalAlign[device] === "bottom" ? 'bottom: 0;' : ''}
-    ${horizontalAlign[device] === "center" ? verticalAlign[device] === "middle" ? "left: 50%; top: 50%; transform: translate(-50%, -50%);" : "" : ""};
+    ${horizontalAlign[device] === "start" ? 'left: 0; right: auto;' : ''}
+    ${horizontalAlign[device] === "center" ? 'left: 50%; right: auto; transform: translateX(-50%);' : ''}
+    ${horizontalAlign[device] === "end" ? 'right: 0; left: auto;' : ''}
+    ${verticalAlign[device] === "top" ? 'top: 0; bottom: auto;' : ''}
+    ${verticalAlign[device] === "middle" ? 'top: 50%; bottom: auto; transform: translateY(-50%);' : ''}
+    ${verticalAlign[device] === "bottom" ? 'bottom: 0; top: auto;' : ''}
+    ${horizontalAlign[device] === "center" ? verticalAlign[device] === "middle" ? "top: 50%; right: auto; bottom: auto; left: 50%; transform: translate(-50%, -50%);" : "" : ""}
   `;
 };
 
