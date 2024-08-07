@@ -17,7 +17,7 @@ const General = ({ attributes, setAttributes, device }) => {
 
 	return <>
 		<BlockControls>
-			{source.url && <ToolbarGroup>
+			{source.url && sourceType === 'custom' && <ToolbarGroup>
 				<ToolbarButton
 					icon='edit'
 					iconSize='25'

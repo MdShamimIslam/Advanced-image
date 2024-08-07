@@ -1,34 +1,5 @@
 $primaryColor: #4527a4;
 
-// .components-form-toggle.is-checked .components-form-toggle__track {
-// 	background-color: #635bbc;
-// 	border-color: #635bbc;
-// }
-
-// .sourceType {
-// 	.images {
-// 		display: flex;
-// 		justify-content: center;
-// 		align-items: center;
-// 		gap: 50px;
-// 		text-align: center;
-// 	}
-
-// 	.imgText {
-// 		margin-top: -15px;
-// 		color: rgb(124, 121, 123);
-// 		font-size: 14px;
-// 	}
-
-// 	.imgSource {
-// 		text-align: center;
-// 		font-weight: semibold;
-// 		margin-top: -10px;
-// 		color: #4527a4;
-// 	}
-
-// }
-
 .bBlocksInspectorInfo {
 	padding: 6px;
 
@@ -43,6 +14,30 @@ $primaryColor: #4527a4;
 	
 	* {
 		box-sizing: border-box;
+	}
+
+	.sourceType {
+		.images {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+			text-align: center;
+		}
+	
+		.imgText {
+			margin-top: -15px;
+			color: rgb(124, 121, 123);
+			font-size: 14px;
+		}
+	
+		.imgSource {
+			text-align: center;
+			font-weight: semibold;
+			margin-top: -10px;
+			color: #4527a4;
+		}
+	
 	}
 }
 

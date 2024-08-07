@@ -1,5 +1,30 @@
 $primaryColor: #4527a4;
 
+.imgChild div {
+	transition: transform 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
+}
+
+.imgChild:hover {
+	div {
+		transform: scale(1.1);
+		cursor: pointer;
+	}
+
+}
+
+.contentPan,
+.stylePan {
+	background: #5a595a2e;
+}
+
+.contentChild,
+.styleChild {
+	margin-top: -15px;
+	background: #EEEEEE;
+	padding: 10px 15px;
+	border-radius: 15px;
+}
+
 // toggle button style
 .components-form-toggle.is-checked .components-form-toggle__track {
 	background-color: #635bbc;
@@ -12,31 +37,6 @@ $primaryColor: #4527a4;
 	* {
 		box-sizing: border-box;
 	}
-
-	.sourceType {
-		.images {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 50px;
-			text-align: center;
-		}
-
-		.imgText {
-			margin-top: -15px;
-			color: rgb(124, 121, 123);
-			font-size: 14px;
-		}
-
-		.imgSource {
-			text-align: center;
-			font-weight: semibold;
-			margin-top: -10px;
-			color: #4527a4;
-		}
-
-	}
-
 
 	.bBlocksAdvancedImage {
 		display: flex;
@@ -76,32 +76,4 @@ $primaryColor: #4527a4;
 		width: 100%;
 		max-width: 100%;
 	}
-}
-
-
-
-
-.imgChild div {
-	transition: transform 0.5s, border 0.5s, border-radius 0.5s, box-shadow 0.5s;
-}
-
-.imgChild:hover {
-	div {
-		transform: scale(1.1);
-		cursor: pointer;
-	}
-
-}
-
-.contentPan,
-.stylePan {
-	background: #5a595a2e;
-}
-
-.contentChild,
-.styleChild {
-	margin-top: -15px;
-	background: #EEEEEE;
-	padding: 10px 15px;
-	border-radius: 15px;
 }

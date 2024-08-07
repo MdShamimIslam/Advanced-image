@@ -1,5 +1,5 @@
 
-import React from 'react';
+import { __ } from '@wordpress/i18n';
 import { BplMediaPlaceholder } from '../../../../Components';
 import { updateData } from '../../utils/functions';
 import { RichText } from '@wordpress/block-editor';
@@ -32,7 +32,7 @@ const Image = ({ attributes, setAttributes, featureMediaURL }) => {
                         </>
                     ) : (
                         <BplMediaPlaceholder
-                            label='Custom Image'
+                            label={__('Custom Image', 'b-blocks')}
                             onChange={({ id, url, alt, title }) => setAttributes({ image: { ...image, source: { id, url, alt, title } } })}
                         />
                     )}
